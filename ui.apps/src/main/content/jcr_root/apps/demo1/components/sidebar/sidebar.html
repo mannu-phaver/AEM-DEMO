@@ -1,0 +1,38 @@
+<div data-sly-use.sidebar="com.adobe.aem.demo.core.models.Sidebar">
+        <h3>Header Fields</h3>
+        <!-- Display Sidebar properties -->
+        <div>Logo Path:=${sidebar.logopath }  </div>
+        <div> Logo mobile image: "${sidebar.logomobileimage}" </div>
+        <div> Logo Link:<a href="${sidebar.logolink }">${sidebar.logolink}</a></div>
+        <div><p>Checkbox : ${sidebar.checkbox}</p></div>
+<h2>Header Links</h2>
+<div data-sly-list="${sidebar.mul1}">
+  <div>
+    Name: ${item.text1}
+  </div>
+  <div>
+    Image: ${item.image1}
+  </div>
+</div>
+<div data-sly-list="${sidebar.mul2}">
+<h2>SideBar</h2>
+  <div>
+    Desktop Icon: "${item.icon1}"
+  </div>
+  <div>
+     Mobile Icon: <img src="${item.mobileicon1}">
+  </div>
+  <div data-sly-list.nav="${item.nested}">
+     <p> Navigation url:-${nav.navigation}</p>
+
+</div>
+<h3>Region fields</h3>
+<p>Country: ${sidebar.country}</p>
+</div>
+
+
+
+
+
+
+

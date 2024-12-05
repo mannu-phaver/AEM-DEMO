@@ -1,0 +1,23 @@
+<h1>Hello Taks_2</h1>
+
+<div data-sly-use.obj="com.adobe.aem.demo.core.models.Task2">
+    <h2>Tab_1</h2>
+    <div>Text Field: ${obj.text}</div>
+
+    <h2>Tab2</h2>
+    <div data-sly-list.item="${obj.mul}">
+        <div>
+            <div>Name: ${item.text1}</div>
+            <div>
+                Image: <img src="${item.image}" alt="${item.text1}">
+            </div>
+            <div>Country: ${item.country}</div>
+            <div>Switch: ${item.checkbox }</div>
+        </div>
+        <div data-sly-list.nested="${item.nested}">
+            <div>Rich Text: ${nested.text2}</div>
+        </div>
+    </div>
+</div>
+
+
