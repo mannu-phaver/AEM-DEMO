@@ -26,11 +26,16 @@
     </div>
 </div>
 */-->
-<h1 style="color:red;"> God heloo  evening</h1>
-<p>${properties.fname}</p>
-<p>${properties.Student}</p>
-<p>${properties.select}</p>
-<p>${properties.jcr:primaryType}</p>
+<h1 style="color:red;"> God evening</h1>
+<sly data-sly-test="${properties}">
+    <ul>
+        <sly data-sly-list="${properties}">
+            <li><p>jcr:-${item.Name}: ${item.Value}</p></li>
+        </sly>
+    </ul>
+</sly>
+
+
 
 
 
