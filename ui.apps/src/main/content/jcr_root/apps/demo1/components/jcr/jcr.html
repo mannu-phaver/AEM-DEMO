@@ -26,14 +26,13 @@
     </div>
 </div>
 */-->
-<h1 style="color:red;"> God evening</h1>
-<sly data-sly-test="${properties}">
-    <ul>
-        <sly data-sly-list="${properties}">
-            <li><p>jcr:-${item.Name}: ${item.Value}</p></li>
+<h1 style="color:yellow;"> God evening</h1>
+
+
+
+<sly data-sly-list="${Properties}">
+            <li>${item.key}: ${item.value @ context='text'}</li>
         </sly>
-    </ul>
-</sly>
 
 
 
