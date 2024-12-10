@@ -11,38 +11,11 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-                    <fname
+                    <pathfield
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="fname"
-                        name="./fname"/>
-                    <Student
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
-                        name="./Student"
-                        text="Students"/>
-                    <select
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
-                        fieldLabel="Select"
-                        name="./select">
-                        <items jcr:primaryType="nt:unstructured">
-                            <india
-                                jcr:primaryType="nt:unstructured"
-                                text="india"/>
-                            <usa
-                                jcr:primaryType="nt:unstructured"
-                                text="USA"/>
-                        </items>
-                    </select>
-                    <file
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
-                        fieldLabel="UploadDocu"
-                        fileNameParameter="./fileName"
-                        fileReferenceParameter="./fileReference"
-                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
-                        name="./file"/>
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="pathfield"
+                        name="./pathfield"/>
                 </items>
             </container>
         </items>
