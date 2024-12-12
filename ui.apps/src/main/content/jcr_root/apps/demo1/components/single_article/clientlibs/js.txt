@@ -1,1 +1,1 @@
-checkbox_component.js
+js/checkbox-showhide.js
