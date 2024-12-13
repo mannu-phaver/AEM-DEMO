@@ -1,0 +1,8 @@
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-call="${template.placeholder @ isEmpty=!properties.name}" />
+
+<sly data-sly-test="${properties.name}">
+   
+    <h3>Country: ${properties.country}</h3>
+
+</sly>
