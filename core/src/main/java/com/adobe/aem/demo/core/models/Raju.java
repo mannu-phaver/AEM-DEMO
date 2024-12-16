@@ -1,10 +1,7 @@
 package com.adobe.aem.demo.core.models;
 
 
-// package com.adobe.aem.demo.core.models;
-
 import java.util.List;
-
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
@@ -12,41 +9,27 @@ import org.apache.sling.models.annotations.injectorspecific.ChildResource;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 @Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-public class Multi {
+
+public class Raju {
+    @ValueMapValue
+    private String text;
 
     @ValueMapValue
-    private String text1;
-
-    @ValueMapValue
-    private String image;
-
-    @ValueMapValue
-    private String checkbox;
-
-    @ValueMapValue
-    private String country;
+    private String imagepath;
 
     @ChildResource
-    private List<Nest> nested;
+    private List<Mulit4> multifield;
 
-    public String getText1() {
-        return text1;
+    public String getText() {
+        return text;
     }
 
-    public String getImage() {
-        return image;
+    public List<Mulit4> getMultifield() {
+        return multifield;
     }
 
-    public String getCheckbox() {
-        return checkbox;
+    public String getImagepath() {
+        return imagepath;
     }
 
-    public String getCountry() {
-        return country;
-    }
-
-    public List<Nest> getNested() {
-        return nested;
-    }
 }
-
