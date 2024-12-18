@@ -47,11 +47,11 @@ import org.apache.sling.api.resource.ResourceResolverFactory;
 // import org.apache.sling.api.resource.ResourceResolverFactory;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+// import org.slf4j.Logger;
+// import org.slf4j.LoggerFactory;
 
 import javax.jcr.Node;
-import javax.jcr.RepositoryException;
+// import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 
 import java.util.Collections;
@@ -74,8 +74,8 @@ public class ReplicationServiceImpl implements ReplicationService {
 
     protected static final String SERVICE_NAME = "mannu";
 
-    private static final String TAG = ReplicationServiceImpl.class.getSimpleName();
-    private static final Logger LOGGER = LoggerFactory.getLogger(ReplicationServiceImpl.class);
+    // private static final String TAG = ReplicationServiceImpl.class.getSimpleName();
+    // private static final Logger LOGGER = LoggerFactory.getLogger(ReplicationServiceImpl.class);
 
     @Reference
     Replicator replicator;
@@ -86,7 +86,7 @@ public class ReplicationServiceImpl implements ReplicationService {
 
     @Override
     public void replicateContent(String payload) {
-        LOGGER.info("{}: trying to replicate: {}", TAG, payload);
+        // LOGGER.info("{}: trying to replicate: {}", TAG, payload);
         // Getting resource resolver
        final Map<String, Object> authInfo = Collections.singletonMap(
                 ResourceResolverFactory.SUBSERVICE,
@@ -104,7 +104,7 @@ public class ReplicationServiceImpl implements ReplicationService {
         for (String assetPath : assetsOnPage) {
             replicate(session, assetPath);
         }
-        LOGGER.info("{}: replication completed successfully", TAG);
+        // LOGGER.info("{}: replication completed successfully", TAG);
     
 } catch (LoginException e) {
     // TODO Auto-generated catch block
@@ -126,10 +126,10 @@ public class ReplicationServiceImpl implements ReplicationService {
 
     private void replicate(Session session, String path) {
         try {
-            LOGGER.info("{}: Replicating: {}", TAG, path);
+            // LOGGER.info("{}: Replicating: {}", TAG, path);
             replicator.replicate(session, ReplicationActionType.ACTIVATE, path);
         } catch (ReplicationException e) {
-            LOGGER.error("{}: replication failed due to: {}", TAG, e.getMessage());
+            // LOGGER.error("{}: replication failed due to: {}", TAG, e.getMessage());
         }
     }
 }
