@@ -27,7 +27,7 @@ import static com.adobe.aem.demo.core.jobs.PageReplicationJob.SERVICE_NAME;
 )
 public class PageReplicationJob implements JobConsumer {
 
-    protected static final String SERVICE_NAME = "Page Replicate Job";
+    protected static final String SERVICE_NAME = "mannu";
     // private static final String TAG = PageReplicationJob.class.getSimpleName();
     // private static final Logger LOGGER = LoggerFactory.getLogger(PageReplicationJob.class);
 
@@ -39,7 +39,7 @@ public class PageReplicationJob implements JobConsumer {
         // LOGGER.debug("{}: trying to execute job: {}", TAG, job.getTopic());
         try {
             // Get the payload path from the job properties
-            String payloadPath = (String) job.getProperty("payload");
+            String payloadPath = job.getProperty("payload").toString();
             // Call the replication service
             replicationService.replicateContent(payloadPath);
             return JobResult.OK;

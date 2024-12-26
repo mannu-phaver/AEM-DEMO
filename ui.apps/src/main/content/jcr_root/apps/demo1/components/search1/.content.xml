@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="Simple search component that searches for the component based on user input on JCR."
+    jcr:primaryType="cq:Component"
+    jcr:title="Search1"
+    componentGroup="Tasks"/>

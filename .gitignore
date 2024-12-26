@@ -101,3 +101,4 @@ reports/
 
 # Others
 dispatcher/src/conf.d/variables/default.vars
+ui.apps/src/main/content/jcr_root/apps/demo1/components/task17/clientlibs/js.txt

@@ -1,5 +1,10 @@
 package com.adobe.aem.demo.core.services.impl;
 
+// import static com.adobe.aem.demo.core.constants.AppConstants.EQUALS;
+// package com.adobe.aem.demo.core.services.impl;
+import static com.adobe.aem.demo.core.services.impl.ReplicationServiceImpl.*;
+import static com.day.cq.dam.api.DamConstants.*;
+
 // public class hi3 {
 
 // }
@@ -27,18 +32,17 @@ package com.adobe.aem.demo.core.services.impl;
 // import java.util.Set;
 
 // import static com.day.cq.dam.api.DamConstants.MOUNTPOINT_ASSETS;
-import static org.osgi.service.event.EventConstants.SERVICE_ID;
-// import static com.adobe.aem.demo.core.constants.AppConstants.EQUALS;
-import static com.adobe.aem.demo.core.services.impl.ReplicationServiceImpl.SERVICE_NAME;
-// package com.adobe.aem.demo.core.services.impl;
+import static org.osgi.service.event.EventConstants.*;
 
-import com.day.cq.dam.api.Asset;
-import com.day.cq.dam.commons.util.AssetReferenceSearch;
-import com.day.cq.replication.ReplicationActionType;
-import com.day.cq.replication.ReplicationException;
-import com.day.cq.replication.Replicator;
-import com.day.cq.wcm.api.Page;
-import com.day.cq.wcm.api.PageManager;
+import java.util.Collections;
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Set;
+
+import javax.jcr.Node;
+// import javax.jcr.RepositoryException;
+import javax.jcr.Session;
 
 import org.apache.sling.api.resource.LoginException;
 import org.apache.sling.api.resource.Resource;
@@ -50,20 +54,14 @@ import org.osgi.service.component.annotations.Reference;
 // import org.slf4j.Logger;
 // import org.slf4j.LoggerFactory;
 
-import javax.jcr.Node;
-// import javax.jcr.RepositoryException;
-import javax.jcr.Session;
-
-import java.util.Collections;
-import java.util.LinkedHashSet;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
-
-import static com.day.cq.dam.api.DamConstants.MOUNTPOINT_ASSETS;
-
-
 import com.adobe.aem.demo.core.services.ReplicationService;
+import com.day.cq.dam.api.Asset;
+import com.day.cq.dam.commons.util.AssetReferenceSearch;
+import com.day.cq.replication.ReplicationActionType;
+import com.day.cq.replication.ReplicationException;
+import com.day.cq.replication.Replicator;
+import com.day.cq.wcm.api.Page;
+import com.day.cq.wcm.api.PageManager;
 @Component(
         service = ReplicationService.class,
         property = {

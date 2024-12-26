@@ -7,13 +7,12 @@
 // import org.junit.jupiter.api.Test;
 // import org.junit.jupiter.api.extension.ExtendWith;
 
-// import java.io.IOException;
-
 // import static org.junit.jupiter.api.Assertions.assertEquals;
 
 // @ExtendWith(AemContextExtension.class)
 // class ExampleTest {
 
+//     // Initialize AEM context for mock testing
 //     private final AemContext context = new AemContext();
 //     private Example example;
 
@@ -24,10 +23,9 @@
 //                 "sling:resourceType", "/apps/demo1/components/example",
 //                 "fname", "John",
 //                 "student", "Doe",
-//                 "Dropdown", "Option1",
+//                 "dropdown", "Option1",  // Corrected the property name casing
 //                 "path", "/content/sample"
 //         );
-
 
 //         // Adapt the resource to the Example model
 //         Resource resource = context.resourceResolver().getResource("/content/example");
@@ -35,22 +33,22 @@
 //     }
 
 //     @Test
-//     void getFname() throws IOException {
+//     void testGetFname() {
 //         assertEquals("John", example.getFname(), "The fname property should return 'John'");
 //     }
 
 //     @Test
-//     void getStudent() throws IOException {
+//     void testGetStudent() {
 //         assertEquals("Doe", example.getStudent(), "The student property should return 'Doe'");
 //     }
 
 //     @Test
-//     void getDropdown() throws IOException{
-//         assertEquals("Option1", example.getDropdown(), "The Dropdown property should return 'Option1'");
+//     void testGetDropdown() {
+//         assertEquals("Option1", example.getDropdown(), "The dropdown property should return 'Option1'");
 //     }
 
 //     @Test
-//     void getPath() throws IOException{
+//     void testGetPath() {
 //         assertEquals("/content/sample", example.getPath(), "The path property should return '/content/sample'");
 //     }
 // }

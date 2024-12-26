@@ -1,0 +1,80 @@
+<!-- HTL Code -->
+<div class="content-container" data-sly-use.task2="com.adobe.aem.demo.core.models.Raju">
+    <!-- Image Section -->
+    <div class="image-container">
+        <img src="${task2.imagepath}" alt="description" class="content-image">
+    </div>
+
+    <!-- Multifield Section -->
+    <ul class="multifield-list">
+        <div data-sly-list.entry="${task2.multifield}">
+            <li class="multifield-item">
+                <a href="${entry.pathfield}">
+                <span class="text-body--xsmall">${entry.additionaltext}</span>
+                </a>
+            </li>
+        </div>
+    </ul>
+
+    <!-- Rich Text Section -->
+    <div class="richtext-container">
+        <p class="richtext-content">${task2.text @ context='html'}</p>
+    </div>
+</div>
+
+<!-- CSS -->
+<style>
+.content-container {
+    background-color:#95e636;
+    margin-top: 1rem;
+    display: flex;
+    
+}
+
+.image-container {
+    margin-left:0px;
+}
+
+.content-image {
+    flex-shrink: 0;
+}
+
+.multifield-list {
+    display: flex;
+    flex-direction: row; /* Change to row for horizontal layout */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 1rem;
+}
+
+.multifield-item {
+   margin-left:0px;
+    background-color:white;
+}
+.multifield-item:hover{
+    background-color:green;
+}
+.text-body--xsmall{
+    font-size: .875rem;
+    line-height: 1.25rem;
+    letter-spacing: -.02em;
+}
+.multifield-link {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    letter-spacing: -.02em;
+}
+
+.multifield-link:hover {
+    text-decoration: underline;
+}
+
+.richtext-container {
+    margin-top: 150px;
+    margin-left:10%;
+}
+
+.richtext-content {
+    font-size: 14px;
+    color: #ffffff; /* White text for the rich text */
+}
+</style>

@@ -49,11 +49,10 @@ public class PageUpdatedEventHandler implements EventHandler {
             Map<String, Object> jobProperties = new HashMap<>();
             jobProperties.put("payload", payload);
             // Add this job to the job manager
-            jobManager.addJob("demo1/sample", jobProperties);
+            jobManager.addJob("/apps/demo1/sample", jobProperties);
             // LOGGER.info("{}: job is completed successfully", TAG);
         } catch (Exception e) {
             // LOGGER.error("{}: exception occurred: {}", TAG, e.getMessage());
         }
     }
 }
-// This is nothing but a simple event handler listening to the events on a page of type
